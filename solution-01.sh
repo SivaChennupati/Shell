@@ -1,5 +1,8 @@
-#!/bin/bash -ex
+#!/bin/bash
 
-ls /etc/passwd
-ls /move/along/nothing/to/see/here
-ls /etc/passwd
+function file_count() {
+   local NUMBER_OF_FILES=$(ls | wc -l)
+   echo "$NUMBER_OF_FILES"
+}
+
+file_count
